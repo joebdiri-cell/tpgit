@@ -1,4 +1,4 @@
-taches = []  # chaque tâche : {"numero": int, "titre": str}
+taches = []
 prochain_numero = 1
 
 
