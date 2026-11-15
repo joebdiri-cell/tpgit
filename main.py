@@ -23,3 +23,14 @@ def afficher_taches():
     for tache in taches:
         print(f"{tache['numero']} - {tache['titre']}")
 
+def rechercher_tache():
+    mot= input("Mot-clé à rechercher : ").strip().lower()
+    if mot == "":
+        print("Erreur : le mot-clé ne peut pas être vide.")
+        return
+    trouvees = [t for t in taches if mot in t["titre"].lower()]
+    if len(trouvees) == 0:
+        print("Aucune tâche ne correspond à ce mot-clé.")
+        return
+    for tache in trouvees:
+        print(f"{tache['numero']} - {tache['titre']}")
