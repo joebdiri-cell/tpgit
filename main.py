@@ -34,3 +34,23 @@ def rechercher_tache():
         return
     for tache in trouvees:
         print(f"{tache['numero']} - {tache['titre']}")
+        
+def main():
+    choix = ""
+    while choix != "0":
+        afficher_menu()
+        choix = input("Votre choix : ").strip()
+        if choix == "1":
+            ajouter_tache()
+        elif choix == "2":
+            afficher_taches()
+        elif choix == "3":
+            rechercher_tache()
+        elif choix == "0":
+            print("Au revoir !")
+        else:
+            print("Erreur : option invalide, veuillez choisir 1, 2, 3 ou 0.")
+
+
+if __name__ == "__main__":
+    main()
