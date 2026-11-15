@@ -16,3 +16,10 @@ def ajouter_tache():
     prochain_numero += 1
     print("Tâche ajoutée avec succès.")
 
+def afficher_taches():
+    if len(taches) == 0:
+        print("Aucune tâche dans la liste.")
+        return
+    for tache in taches:
+        print(f"{tache['numero']} - {tache['titre']}")
+
